@@ -1,2 +1,5 @@
-project.xcworkspace
-xcuserdata
+.*
+!/.gitignore
+*.iml
+build
+classes
