@@ -1,0 +1,8 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group = 'hu.lakospeter'
+version = '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
