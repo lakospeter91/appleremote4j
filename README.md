@@ -59,30 +59,18 @@ If you want to modify appleremote4j before using it.
 You can also modify unconed's iremotepipe if you want. Its source code is located under `src/main/obj-c/unconed`. When you are done, compile iremotepipe by running `./build-iremotepipe.sh` in the project's root. The resulting binary will be `src/main/resources/iremotepipe`.
 
 ##### A Basic Example
+
 1. Create a class (e.g. `MyAppleRemoteListener`) that implements `AppleRemoteListener`, and instanciate it.
-```java
-MyAppleRemoteListener myAppleRemoteListener = new MyAppleRemoteListener();
-```
+`MyAppleRemoteListener myAppleRemoteListener = new MyAppleRemoteListener();`
 2. Create an `AppleRemote` object.
-```java
-AppleRemote appleRemote = new AppleRemote();
-```
-
-3. Add your `AppleRemoteListener` to this `AppleRemote`.
-```java
-appleRemote.addAppleRemoteListener(myAppleRemoteListener);
-```
-
-4. Write your code in the event listener methods in your `AppleRemoteListener` (e.g. `playPauseHeld()`). Use the `AppleRemoteEvent` object that you get as a parameter.
-
+`AppleRemote appleRemote = new AppleRemote();`
+3.  Add your `AppleRemoteListener` to this `AppleRemote`.
+`appleRemote.addAppleRemoteListener(myAppleRemoteListener);`
+4.  Write your code in the event listener methods in your `AppleRemoteListener` (e.g. `playPauseHeld()`). Use the `AppleRemoteEvent` object that you get as a parameter.
 5. There are two ways to stop the `AppleRemote` from running. Either:
-```java
-appleRemote.removeAppleRemoteListener(myAppleRemoteListener);
-```
+`appleRemote.removeAppleRemoteListener(myAppleRemoteListener);`
 (if this was the last `AppleRemoteListener` that was listening to this `AppleRemote`) Or:
-```java
-appleRemote.stopRunning();
-```
+`appleRemote.stopRunning();`
 
 
 ### How It Works
